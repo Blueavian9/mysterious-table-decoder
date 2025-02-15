@@ -9,4 +9,8 @@ function decode(data) {
     // Your solution here
 }
 
+// TODO: Add command-line argument handling here to support running as a standalone script
+// Example: if running as a script, read the JSON file specified in the arguments
+// and pass the data to the decode function
+
 module.exports = decode; 

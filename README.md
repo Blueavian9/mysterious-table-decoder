@@ -20,6 +20,24 @@ The `data.json` file contains an object with two properties:
 2. Convert the decoded message to base64
 3. Return the base64 string
 
+### Implementation Requirements
+Your solution must work in two ways:
+
+1. As a module export:
+```javascript
+const decode = require('./solution.js');
+const result = decode(jsonData); // Takes JSON object directly
+```
+
+2. As a standalone script:
+```bash
+node solution.js data1.json  # Takes filename as command line argument
+```
+
+The core decode function should accept a JSON object containing the table and indices, while the standalone mode should handle reading the JSON file and passing it to the decode function.
+
+A template for the solution is provided in `solution.js`, including hints for implementing the command-line functionality.
+
 ### Constraints
 - The table will contain ASCII characters
 - The indices array will have at least one element
@@ -35,15 +53,30 @@ Given the following `data.json`:
 }
 ```
 
-Your function should:
-1. Decode the message using the indices (ignoring index 0)
-2. Convert the result to base64
-3. Return the base64 string
+Your function should decode the message using the table and indices according to the pattern, then return the result in base64 format.
+
+### Sample Data Files
+To help you develop and test your solution, several sample data files are provided:
+- `data1.json`: Basic example with repeated indices
+- `data2.json`: Alternating indices pattern with uppercase letters
+- `data3.json`: Longer table with numeric characters
+- `data4.json`: Example with special characters
+
+Feel free to use these files to test your solution before running the official tests.
 
 ### Testing
-Place your solution in a file called `solution.js` in this directory. Run the tests using:
+Place your solution in a file called `solution.js` in this directory. You can test it in two ways:
+
+1. Run the official tests:
 ```bash
 node test.js
+```
+
+2. Test with sample data files:
+```bash
+node solution.js data1.json
+node solution.js data2.json
+# etc...
 ```
 
 Good luck, decoder! 🕵️‍♂️
