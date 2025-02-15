@@ -1,0 +1,16 @@
+{
+  "name": "mysterious-table-decoder",
+  "version": "1.0.0",
+  "description": "A challenge to decode a mysterious message using a table and indices",
+  "main": "solution.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "decoder",
+    "challenge",
+    "base64"
+  ],
+  "author": "",
+  "license": "MIT"
+}
